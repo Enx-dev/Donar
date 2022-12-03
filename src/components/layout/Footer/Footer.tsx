@@ -10,7 +10,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <footer className="contain my-4    space-y-48">
+    <footer className="contain space-y-20">
       <CTA />
       <div className="flex flex-col md:flex-row mb-[100px]  justify-between items-center">
         <div className="ml-[-12px] sm:ml-0  md:ml-0">

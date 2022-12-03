@@ -27,12 +27,14 @@ const Navbar = () => {
 
   const [open, setOpen] = useState<boolean>(false);
   return (
+
     <nav className="grid grid-cols-3 relative  justify-between items-center py-16 contain ">
       <div className="md:ml-20 lg:ml-0">
         <BrandLogo />
       </div>
       <ul className="lg:flex space-x-2 lg:space-x-4 hidden w-80 lg:flex-1   items-center text-text tracking-tight font-head text-light-text">
         {/* 
+
         <li>
           <Link href="#">About</Link>
         </li>
