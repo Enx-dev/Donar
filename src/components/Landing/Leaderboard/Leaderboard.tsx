@@ -53,9 +53,10 @@ const Leaderboard = (props: Props) => {
       <h1 className="text-[48px] text-light-text text-center font-semibold mb-10">
         Donors of the week
       </h1>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid  grid-cols-1 sm:scale-75 md:ml-[-12px] lg:ml-0 sm:grid-cols-2 md:gap-8 md:grid-cols-2 justify-center ml-4 sm:ml-[-18px]   sm:gap-4  xl:grid-cols-3 gap-8">
         {donors.map((item) => {
           return (
+            
             <Card
               amount={item.amount}
               img={item.img}

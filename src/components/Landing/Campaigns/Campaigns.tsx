@@ -11,7 +11,8 @@ type Props = {};
 
 const Campaigns = (props: Props) => {
   return (
-    <div className="contain flex flex-wrap justify-between my-20">
+    <div className="contain grid grid-cols-1 md:grid-cols-2 justify-center items-center ml-6 sm:ml-32 lg:ml-12 md:ml-0   sm:gap-4  px-8 lg:gap-6 my-20 ">
+      <Card/>
       <Card />
       <Card />
       <Card />
@@ -21,7 +22,7 @@ const Campaigns = (props: Props) => {
 
 const Card = () => {
   return (
-    <div className="w-[375px] bg-light-accent3 p-4 rounded-lg">
+    <div className="w-[375px] bg-light-accent3 p-4 rounded-lg  ml-0">
       <div>
         <Image className="rounded-lg" src={phImg} alt="kids" />
         <div className="py-4 space-y-4">
@@ -73,7 +74,10 @@ const Card = () => {
           </div>
         </div>
       </div>
-      <Button variant="contained">Donate</Button>
+      <div className="ml-16 ">
+
+      <Button variant="contained " >Donate</Button>
+      </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ type Props = {};
 
 const CTA = (props: Props) => {
   return (
-    <div className="w-full flex items-center justify-between bg-dark-accent px-9 py-12 md:px-12  md:py-16 rounded-md">
+    <div className="w-full flex  flex-wrap items-center justify-between bg-dark-accent px-9 py-12 md:px-12  md:py-12 rounded-md">
       <div className="space-y-2">
         <p className="text-lg md:text-3xl tracking-tight font-semibold text-dark-primary">
           Running a charity organization?
@@ -14,7 +14,7 @@ const CTA = (props: Props) => {
           Let’s connect you to the community
         </p>
       </div>
-      <div className="max-w-lg">
+      <div className="max-w-lg mt-4 flex items-center justify-center md:items-left md:justify-start">
         <Button variant="contained">Start Fundraising</Button>
       </div>
     </div>
