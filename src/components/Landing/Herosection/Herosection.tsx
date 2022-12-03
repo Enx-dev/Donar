@@ -6,9 +6,10 @@ type Props = {};
 
 const Herosection = (props: Props) => {
   return (
-    <section className="flex items-center justify-between pl-8 md:pl-12 lg:pl-24">
-      <div className=" space-y-4 max-w-[600px] w-full">
-        <p className="text-light-text/80 font-normal text-[48px] leading-[56px] ">
+    <section className="flex items-center justify-between pl-8 md:pl-12 lg:pl-24 ">
+      <div className=" space-y-4 max-w-[600px] w-full flex-1 md:flex-1  lg:text-left ">
+        <div className="md:ml-12 lg:ml-0">
+        <p className="text-light-text/80 font-normal text-[48px] leading-[56px]  ">
           Donate to earn
         </p>
         <p className="text-light-text text-[60px] font-bold leading-[72px]">
@@ -18,13 +19,15 @@ const Herosection = (props: Props) => {
           Earn rewards while donating to a worthy cause. Donate from anywhere
           around the world with crypto, no intermediaries, no charges.
         </p>
-        <div className="flex space-x-4 items-center">
-          <Button variant="contained">Donate Now</Button>
+        </div>
+        <div className="flex space-x-2 items-center">
+          <Button variant="contained ">Donate Now</Button>
           <Button variant="outlined">Explore Campaingns</Button>
         </div>
       </div>
+
       <div>
-        <Image src={heroImg} alt="hero-img" width={600} />
+        <Image className="hidden lg:flex " src={heroImg} alt="hero-img" width={600} />
       </div>
     </section>
   );

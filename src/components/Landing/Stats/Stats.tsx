@@ -32,7 +32,7 @@ const items = [
 const Stats = () => {
   return (
     <section className="bg-light-secondary   py-8  md:py-16 my-24">
-      <div className=" flex items-center contain justify-between">
+      <div className=" grid grid-cols-2 md:grid-cols-4 space-y-2 sm: items-center contain justify-between">
         {items.map((item) => {
           return (
             <Items
