@@ -1,10 +1,14 @@
 import {createContext} from "react"
+import {ethers} from "ethers"
+
+
+
 
 
 const DonarContext = createContext(null)
 
-const DonarProvider =async({children})=>{
-
+const DonarProvider =({children})=>{
+  
     async function connect() {
         if (typeof window.ethereum !== "undefined") {
             try {
@@ -18,9 +22,10 @@ const DonarProvider =async({children})=>{
             console.log("metamask does not exist")
         }
        }
+    
 
     return <DonarContext.Provider value={{connect}}>
-         {children}
+                 {children}
     </DonarContext.Provider>
 }
 

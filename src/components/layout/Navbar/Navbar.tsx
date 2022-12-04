@@ -1,9 +1,10 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import BrandLogo from "../../shared/BrandLogo";
 import Button from "../../shared/Button/Button";
 import { GiHamburgerMenu } from "react-icons/gi";
 import BurgerNav from "./BurgerNav";
+import {DonarContext} from "../../../DonarBackend/Donar"
 
 const Navbar = () => {
    const NavList = [
@@ -24,7 +25,7 @@ const Navbar = () => {
       name: "Blog",
     },
   ];
-
+   const connect = useContext(DonarContext)
   const [open, setOpen] = useState<boolean>(false);
   return (
 
@@ -57,7 +58,7 @@ const Navbar = () => {
         <Button variant="outlined">Connect wallet</Button>
       </Link>
       <GiHamburgerMenu fontSize={40}   onClick={()=>{setOpen(true)}} className="cursor-pointer lg:hidden" />
-      <div className=" lg:hidden ">
+      <div className=" lg:hidden " >
          <BurgerNav navList ={NavList} icon={GiHamburgerMenu} open={open} setOpen={setOpen}/>
       </div>
     </nav>
