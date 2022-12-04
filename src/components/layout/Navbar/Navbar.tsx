@@ -51,6 +51,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+
       <Link
         href="/connet"
         className="max-w-lg ml-9 flex-1 md:ml-[140px] lg:ml-[62px] xl:ml-9"
@@ -61,6 +62,7 @@ const Navbar = () => {
       <div className=" lg:hidden " >
          <BurgerNav navList ={NavList} icon={GiHamburgerMenu} open={open} setOpen={setOpen}/>
       </div>
+
     </nav>
   );
 };

@@ -32,11 +32,12 @@ vulnerable African children and families by helping to improve access to healthc
 const Blog = (props: Props) => {
   return (
     <section className="contain my-20">
-      <h1 className="text-light-text text-5xl font-medium text-center contain ">
+      <h1 className="text-light-text text-3xl lg:text-5xl font-medium text-center contain ">
         Recent Blog
       </h1>
-      <div className="py-10 grid lg:grid-cols-2  gap-4 items-center justify-between">
-        <div className="scale-110 xl:scale-90 mr-4  hidden lg:flex">
+
+      <div className="py-10 flex gap-4 items-center justify-between">
+        <div className="hidden lg:block">
           <div className="w-[577px] rounded-xl border border-light-accent">
             <Image className="rounded-t-lg w-full" src={pH} alt="image" />
             <div className="p-6 text-text space-y-4">

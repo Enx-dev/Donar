@@ -9,8 +9,8 @@ type Props = {};
 
 const MainHead = (props: Props) => {
   return (
-    <section className="flex items-center my-10 flex-wrap  sm:flex-nowrap ">
-      <div className="w-full ">
+    <section className="flex flex-col lg:flex-row gap-4 lg:gap-0 items-center my-10">
+      <div className="w-full">
         <Image src={MainImage} alt="main" width={500} />
       </div>
       <div className="w-full">
