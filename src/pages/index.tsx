@@ -11,10 +11,13 @@ import {
   Testimonials,
 } from "../components/Landing";
 import Layout from "../components/layout";
+import Navbar from "../components/layout/Navbar/Navbar";
+import Footer from "../components/layout/Footer/Footer";
 export default function Home() {
   return (
     <div className="bg-light-primary App">
-      <Layout>
+
+        <Navbar/>
         <Herosection />
         <Stats />
         <Donate />
@@ -22,7 +25,7 @@ export default function Home() {
         <Leaderboard />
         <Blog />
         <Testimonials />
-      </Layout>
+        <Footer/>
     </div>
   );
 }

@@ -9,7 +9,7 @@ const Donate = (props: Props) => {
   return (
     <section className="contain my-10 lg:my-20 flex flex-col lg:flex-row items-center justify-between">
       <div className="w-full">
-        <Image src={sectionImg} alt="img" />
+        <Image src={sectionImg} className="scale-75 md:scale-75  lg:scale-80" alt="img" />
       </div>
       <div className="text-light-text w-full flex justify-end">
         <div className="max-w-sm">

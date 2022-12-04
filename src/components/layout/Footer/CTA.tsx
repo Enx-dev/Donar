@@ -14,7 +14,7 @@ const CTA = (props: Props) => {
           Let’s connect you to the community
         </p>
       </div>
-      <div className="max-w-lg">
+      <div className="max-w-lg mt-4 flex items-center justify-center md:items-left md:justify-start">
         <Button variant="contained">Start Fundraising</Button>
       </div>
     </div>

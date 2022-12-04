@@ -56,6 +56,7 @@ const Leaderboard = (props: Props) => {
       <div className="grid lg:grid-cols-3 gap-4 lg:gap-8">
         {donors.map((item) => {
           return (
+            
             <Card
               amount={item.amount}
               img={item.img}

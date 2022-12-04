@@ -4,6 +4,7 @@ import paymentIcon from "../../asset/payment.svg";
 import confirmIcon from "../../asset/Confirm.svg";
 import arrowIcon from "../../asset/arrowAlt.svg";
 import Image from "next/image";
+import {ethers} from "ethers"
 
 type Props = {};
 
@@ -27,7 +28,7 @@ const items = [
 
 const Breadcrumb = (props: Props) => {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 mt-3 sm:mt-0 ">
       {items.map((item) => {
         if (item.id !== 3) {
           return (

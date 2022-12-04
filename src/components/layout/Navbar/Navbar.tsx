@@ -1,20 +1,41 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import BrandLogo from "../../shared/BrandLogo";
 import Button from "../../shared/Button/Button";
-import Popup from "./Popup";
-
-import { AiOutlineMenu } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
+import BurgerNav from "./BurgerNav";
+import {DonarContext} from "../../../DonarBackend/Donar"
 
 const Navbar = () => {
-  const [toogle, setToogle] = useState(false);
+   const NavList = [
+    {
+      a: "#",
+      name: "Home",
+    },
+    {
+      a: "#",
+      name: "About",
+    },
+    {
+      a: "#",
+      name: "Campaigns",
+    },
+    {
+      a: "#",
+      name: "Blog",
+    },
+  ];
+   const connect = useContext(DonarContext)
+  const [open, setOpen] = useState<boolean>(false);
   return (
-    <nav className="flex justify-between py-8 contain items-center">
-      <BrandLogo />
-      <ul className="hidden lg:flex space-x-6 items-center text-text tracking-tight font-head text-light-text">
-        <li>
-          <Link href="#">Home</Link>
-        </li>
+
+    <nav className="grid grid-cols-3 relative  justify-between items-center py-16 contain ">
+      <div className="md:ml-20 lg:ml-0">
+        <BrandLogo />
+      </div>
+      <ul className="lg:flex space-x-2 lg:space-x-4 hidden w-80 lg:flex-1   items-center text-text tracking-tight font-head text-light-text">
+        {/* 
+
         <li>
           <Link href="#">About</Link>
         </li>
@@ -23,24 +44,25 @@ const Navbar = () => {
         </li>
         <li>
           <Link href="#">Blog</Link>
-        </li>
+        </li> */}
+        {NavList.map((index) => (
+          <li>
+            <Link href={`${index.a}`}>{index.name}</Link>
+          </li>
+        ))}
       </ul>
-      <Link href="/connet" className="hidden lg:flex max-w-lg">
+
+      <Link
+        href="/connet"
+        className="max-w-lg ml-9 flex-1 md:ml-[140px] lg:ml-[62px] xl:ml-9"
+      >
         <Button variant="outlined">Connect wallet</Button>
       </Link>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        className="w-10 h-10 lg:hidden cursor-pointer"
-        onClick={() => setToogle(true)}>
-        <path
-          fillRule="evenodd"
-          d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-          clipRule="evenodd"
-        />
-      </svg>
-      {toogle && <Popup setToogle={setToogle} />}
+      <GiHamburgerMenu fontSize={40}   onClick={()=>{setOpen(true)}} className="cursor-pointer lg:hidden" />
+      <div className=" lg:hidden " >
+         <BurgerNav navList ={NavList} icon={GiHamburgerMenu} open={open} setOpen={setOpen}/>
+      </div>
+
     </nav>
   );
 };
