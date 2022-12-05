@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  @apply m-0 p-0 box-border;
+  font-family: "Poppins", sans-serif;
+ 
+}
+
+
+.none{
+  transform: translateX(140%) !important;
+  transition: all 1s !important;
+ }
+ 
+ .display{
+   transform: translate(0%) !important;
+    transition: all 1s !important;
+ }
+
+.App {
+  @apply min-h-screen font-head;
+}
+
+.fancy {
+  @apply bg-gradient-to-r from-light-accent to-light-accent2 text-transparent bg-clip-text text-lg font-semibold;
+}
+.contain {
+  @apply px-8 md:px-12 lg:px-24;
+}
+.connetButton {
+  @apply flex px-7 py-2 items-center border border-light-accent2 rounded-lg gap-4 cursor-pointer;
+}
