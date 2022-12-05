@@ -26,10 +26,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
-<<<<<<< HEAD:package.json
-=======
     "react-toastify": "^9.1.1",
->>>>>>> main:Client/package.json
     "sass": "^1.56.1",
     "typescript": "4.9.3"
   },
