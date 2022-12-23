@@ -1,16 +1,13 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import detectEthereumProvider from "@metamask/detect-provider";
-import {abi} from "./constants/contractMetadata.json"
-const contractAddress:string = "0x578A42E65EA6F8cca77940f79734c1da2868BBF7";
-import {ethers} from "ethers"
-import {app,db} from "./Firebase"
-import { collection, getDocs, doc, setDoc } from "firebase/firestore";
+import { abi } from "./constants/contractMetadata.json";
+const contractAddress: string = "0x578A42E65EA6F8cca77940f79734c1da2868BBF7";
+import { ethers } from "ethers";
 
 type IDonar = {
-  connect: () => void;
+  Metaconnect: () => void;
   connected: any;
-  campaigns:object[]
-  donate:() => void
+  donate: () => void;
 };
 
 interface Campaigns{
@@ -24,23 +21,18 @@ interface Campaigns{
 }
 
 const DonarContext = createContext<IDonar>({
-  connect() {
+  Metaconnect() {
     return;
   },
-  donate(){
-    return
+  donate() {
+    return;
   },
   connected: null,
-  campaigns: [{}] 
 });
 
 const DonarProvider = ({ children }: React.PropsWithChildren) => {
   const [connected, setConnected] = useState(null);
-  const [campaigns,setCampaigns] = useState<object[]>([])
-
-
-
-  async function connect() {
+  async function Metaconnect() {
     const provider = await detectEthereumProvider();
 
     if (provider) {
@@ -98,8 +90,8 @@ const DonarProvider = ({ children }: React.PropsWithChildren) => {
   }
 
   return (
-    <DonarContext.Provider value={{ connect, connected ,donate, campaigns}}>
-             {children}
+    <DonarContext.Provider value={{ Metaconnect, connected, donate }}>
+      {children}
     </DonarContext.Provider>
   );
 };
